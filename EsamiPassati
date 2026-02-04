@@ -1,0 +1,37 @@
+ESAME GIUGNO 2025 (Non ricordo il giorno)
+
+Particle filter con definizione di
+State space
+Measurement space
+Measurement function
+Maximum likelihood
+Pseudocodice per predict e update
+
+Esercizio 1:
+Applicazione di RANSAC
+Domanda 1:
+- nello spazio individuare un piano che divida inliers da outliers;
+- una definizione di errore;
+- minimum solver.
+Domanda 2:
+- least squares applicato al caso RANSAC con gli inliers.
+Domanda 3:
+- quando rounds servono per avere tot inliers con tot probabilità? (praticamente equazione 21.1 a pagina 91 - https://drive.google.com/file/d/1_swLrmEoW45DH9z0B7wk1vH2Z20KnsBb/view?usp=sharing)
+Esercizio 2:
+Calibrazione: hai una serie di microfoni e un segnale che si muove per individuarli. è praticamente multi-pose registration.
+Domanda 1:
+- definisci state space e se serve boxplus (non serviva perché aveva detto di ignorare l'orientation, quindi siamo sostanzialmente in R^3),
+- definisci measurement space e se serve boxminus (non serviva per lo stesso motivo),
+- definisci measurement function,
+- struttura e dimensioni di J,
+- struttura di H.
+Domanda 2:
+Assumi ci sono 10 microfoni, quanti ne devi fissare per fare il modo che il sistema non sia più overdetermined?
+
+ESAME 30/01/2026
+Filtering : stimare pose, sensor pose e odometria di un differential drive (quindi stato, funzione transizione, measurements, obs. Function) 
+
+Least squares: tizio a cavallo che vuole mappare delle torri in 2D. Le torri sono identificabili, le misure sono le distanze relative tra le torri e l'angolo. Definire stato etc. 
+Poi veniva chiesto cosa cambiava in 3D e aggiungendo l'elevation. Ultima domanda, colorare la jacobiana in base al grafo. Domanda di teoria, definire il problema Gauss Newton e dimostrare che la H è la sigma x
+
+Domanda di teoria: relazione tra H e \Sigma
