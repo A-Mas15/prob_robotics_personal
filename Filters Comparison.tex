@@ -1,0 +1,18 @@
+KF:
+PRO
+- fast, 
+- optimal, 
+- we need to store only n numbers for an n-dimensionla state
+CONTRA:
+- cannot handle nonlinear systems, 
+- requires states and controls to be Gaussian. 
+
+EKF:
+PRO
+- fast, 
+- optimal, 
+- we need to store only n numbers for an n-dimensionla state
+CONTRA:
+- uses Taylor to approximate nonlinear systems (so prone to error due to approximation), 
+- we need Jacobians, so computationally expensive derivatives and errors in the case of discontinuities, 
+- requires states and controls to be Gaussian. 
