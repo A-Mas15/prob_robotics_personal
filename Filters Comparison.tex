@@ -16,3 +16,22 @@ CONTRA:
 - uses Taylor to approximate nonlinear systems (so prone to error due to approximation), 
 - we need Jacobians, so computationally expensive derivatives and errors in the case of discontinuities, 
 - requires states and controls to be Gaussian. 
+
+UKF:
+PRO
+- better under non-linear transformations,
+- derivative free
+CONTRA
+- slightly slower compared to EFK,
+- relies on Gaussian assumptions (the further a distribution is from a Gaussia one, the worst the performance will be)
+
+PARTICLE:
+PRO
+- derivative free,
+- valid for all distributions, not only Gaussians (also multimodal),
+- can handle non-linear systems
+CONTRA
+- works best for small state space,
+- random sampling introduces variance (and resampling amplifies this variance),
+- using a limites number of samples introduces a bias,
+. it's a sampled based approach, so the quality of the estimation depends on the quality of the filter.
